@@ -34,10 +34,10 @@ public class NetonCordovaInAppUpdate extends CordovaPlugin {
           if (action.equals("updateImmediate")) {
               updateImmediate(callbackContext);
           } else {
-              callbackContext.error('Sorry, updateFlexible not implemented yet.');
+              callbackContext.error("Sorry, updateFlexible not implemented yet.");
           }
       } else {
-          callbackContext.error('Android SDK less than 5.0');
+          callbackContext.error("Android SDK less than 5.0");
       }
   }
 

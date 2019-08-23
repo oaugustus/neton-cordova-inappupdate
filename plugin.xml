@@ -24,5 +24,6 @@
       </config-file>
 
       <source-file src="src/android/br/com/neton/NetonCordovaInAppUpdate.java" target-dir="src/br/com/neton/" />
+      <framework src="src/android/inappupdate.gradle" custom="true" type="gradleReference"/>
     </platform>
 </plugin>

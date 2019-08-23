@@ -14,6 +14,10 @@ import android.content.Intent;
 import android.os.Build;
 import android.content.Context;
 import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.UpdateAvailability;
+
 
 import android.util.Log;
 
@@ -21,6 +25,7 @@ import java.util.Date;
 
 public class NetonCordovaInAppUpdate extends CordovaPlugin {
   private static final String TAG = "NetonCordovaInAppUpdate";
+  private static final int MY_REQUEST_CODE = 1337;
 
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
@@ -42,6 +47,8 @@ public class NetonCordovaInAppUpdate extends CordovaPlugin {
   }
 
   private void updateImmediate(CallbackContext callbackContext) {
+      Context context = this.cordova.getActivity().getApplicationContext();
+
       // Creates instance of the manager.
       AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(context);
 

@@ -23,6 +23,6 @@
         </feature>
       </config-file>
 
-      <source-file src="src/android/br/com/neton/NetonInAppUpdate.java" target-dir="src/br/com/neton/" />
+      <source-file src="src/android/br/com/neton/NetonCordovaInAppUpdate.java" target-dir="src/br/com/neton/" />
     </platform>
 </plugin>

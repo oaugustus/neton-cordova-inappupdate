@@ -1,0 +1,11 @@
+{
+  "name": "neton-cordova-inappupdate",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "neton-cordova-inappupdate",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Plugin que efetua a atualização automática via Play Core"
+}

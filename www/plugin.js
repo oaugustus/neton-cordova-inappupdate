@@ -4,11 +4,11 @@ var exec = require('cordova/exec');
 var PLUGIN_NAME = 'NetonCordovaInAppUpdate';
 
 var InAppUpdate = {
-  start: function(phrase, cb) {
-    exec(cb, null, PLUGIN_NAME, 'updateImmediate', []);
+  updateImmediate: function(onSuccess, onFail) {
+    exec(onSuccess, onFail, PLUGIN_NAME, 'updateImmediate', []);
   },
-  stop: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'updateFlexible', []);
+  updateFlexible: function(onSuccess, onFail) {
+    exec(onSuccess, onFail, PLUGIN_NAME, 'updateFlexible', []);
   }
 };
 

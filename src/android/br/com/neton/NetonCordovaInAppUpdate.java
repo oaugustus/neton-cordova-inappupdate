@@ -88,7 +88,15 @@ public class NetonCordovaInAppUpdate extends CordovaPlugin {
                     e.printStackTrace();
                 }
             } else {
-                Log.d(TAG, "UPDATE AVAILABILITY");
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_NOT_AVAILABLE) {
+                    Log.d(TAG, "UPDATE NOT AVAILABILITY");
+                }
+
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UNKNOWN) {
+                    Log.d(TAG, "UNKNOWN");
+                }
+
+                callbackContext.success("false");
                 Log.d(TAG, "");
             }
         });

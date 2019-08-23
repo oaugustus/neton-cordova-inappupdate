@@ -18,7 +18,7 @@
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="NetonCordovaInAppUpdate">
-          <param name="android-package" value="br.com.neton.NetonInAppUpdate" />
+          <param name="android-package" value="br.com.neton.NetonCordovaInAppUpdate" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
